@@ -640,3 +640,49 @@
 2018-12-26 11:07:43,032 MainProgram.py(98): ERROR InfluxDB数据库端口连接不上
 2018-12-26 11:07:54,293 MainProgram.py(98): ERROR InfluxDB数据库端口连接不上
 2018-12-26 11:08:04,267 MainProgram.py(98): ERROR InfluxDB数据库端口连接不上
+2019-01-07 14:13:38,117 C:/Users/tanglei/PycharmProjects/MeetingUserConcurrency/MainProgram.py(149): INFO 数据库运行正常，程序正常工作
+2019-01-07 14:15:26,861 C:/Users/tanglei/PycharmProjects/MeetingUserConcurrency/MainProgram.py(149): INFO 数据库运行正常，程序正常工作
+2019-01-07 14:15:45,872 C:/Users/tanglei/PycharmProjects/MeetingUserConcurrency/MainProgram.py(149): INFO 数据库运行正常，程序正常工作
+2019-01-07 14:17:44,289 C:/Users/tanglei/PycharmProjects/MeetingUserConcurrency/MainProgram.py(150): INFO 数据库运行正常，程序正常工作
+2019-01-07 14:20:58,052 C:/Users/tanglei/PycharmProjects/MeetingUserConcurrency/MainProgram.py(149): INFO 数据库运行正常，程序正常工作
+2019-01-07 14:22:46,944 C:/Users/tanglei/PycharmProjects/MeetingUserConcurrency/MainProgram.py(151): INFO 数据库运行正常，程序正常工作
+2019-01-07 14:53:43,671 C:/Users/tanglei/PycharmProjects/MeetingUserConcurrency/MainProgram.py(117): ERROR Traceback (most recent call last):
+  File "C:/Users/tanglei/PycharmProjects/MeetingUserConcurrency/MainProgram.py", line 105, in SetRelayConcurrencyNew
+    RelayConcurrencyNumberIPaddr = RelayConcurrencyNumber[j][1]
+IndexError: list index out of range
+
+2019-01-07 15:05:03,898 C:/Users/tanglei/PycharmProjects/MeetingUserConcurrency/MainProgram.py(151): INFO 数据库运行正常，程序正常工作
+2019-01-07 15:06:03,329 C:/Users/tanglei/PycharmProjects/MeetingUserConcurrency/MainProgram.py(151): INFO 数据库运行正常，程序正常工作
+2019-01-07 15:06:20,637 C:/Users/tanglei/PycharmProjects/MeetingUserConcurrency/MainProgram.py(151): INFO 数据库运行正常，程序正常工作
+2019-01-07 15:06:34,434 C:/Users/tanglei/PycharmProjects/MeetingUserConcurrency/MainProgram.py(151): INFO 数据库运行正常，程序正常工作
+2019-01-07 15:06:54,493 C:/Users/tanglei/PycharmProjects/MeetingUserConcurrency/MainProgram.py(151): INFO 数据库运行正常，程序正常工作
+2019-01-07 15:07:42,497 C:/Users/tanglei/PycharmProjects/MeetingUserConcurrency/MainProgram.py(151): INFO 数据库运行正常，程序正常工作
+2019-01-07 15:08:30,971 C:/Users/tanglei/PycharmProjects/MeetingUserConcurrency/MainProgram.py(151): INFO 数据库运行正常，程序正常工作
+2019-01-07 15:09:45,023 C:/Users/tanglei/PycharmProjects/MeetingUserConcurrency/MainProgram.py(151): INFO 数据库运行正常，程序正常工作
+2019-01-07 15:10:59,096 C:/Users/tanglei/PycharmProjects/MeetingUserConcurrency/MainProgram.py(151): INFO 数据库运行正常，程序正常工作
+2019-01-07 15:15:29,144 C:/Users/tanglei/PycharmProjects/MeetingUserConcurrency/MainProgram.py(148): INFO 数据库运行正常，程序正常工作
+2019-01-07 15:16:03,611 C:/Users/tanglei/PycharmProjects/MeetingUserConcurrency/MainProgram.py(148): INFO 数据库运行正常，程序正常工作
+2019-01-07 15:18:29,188 C:/Users/tanglei/PycharmProjects/MeetingUserConcurrency/MainProgram.py(148): INFO 数据库运行正常，程序正常工作
+2019-01-07 15:19:02,657 C:/Users/tanglei/PycharmProjects/MeetingUserConcurrency/MainProgram.py(148): INFO 数据库运行正常，程序正常工作
+2019-01-07 15:19:55,426 C:/Users/tanglei/PycharmProjects/MeetingUserConcurrency/MainProgram.py(148): INFO 数据库运行正常，程序正常工作
+2019-01-07 15:20:20,752 C:/Users/tanglei/PycharmProjects/MeetingUserConcurrency/MainProgram.py(148): INFO 数据库运行正常，程序正常工作
+2019-01-07 15:22:10,163 C:/Users/tanglei/PycharmProjects/MeetingUserConcurrency/MainProgram.py(148): INFO 数据库运行正常，程序正常工作
+2019-01-07 15:22:31,510 C:/Users/tanglei/PycharmProjects/MeetingUserConcurrency/MainProgram.py(148): INFO 数据库运行正常，程序正常工作
+2019-01-07 15:23:04,854 C:/Users/tanglei/PycharmProjects/MeetingUserConcurrency/MainProgram.py(148): INFO 数据库运行正常，程序正常工作
+2019-01-07 15:23:28,171 C:/Users/tanglei/PycharmProjects/MeetingUserConcurrency/MainProgram.py(148): INFO 数据库运行正常，程序正常工作
+2019-01-07 15:23:48,295 C:/Users/tanglei/PycharmProjects/MeetingUserConcurrency/MainProgram.py(148): INFO 数据库运行正常，程序正常工作
+2019-01-07 15:24:05,375 C:/Users/tanglei/PycharmProjects/MeetingUserConcurrency/MainProgram.py(148): INFO 数据库运行正常，程序正常工作
+2019-01-07 15:24:36,605 C:/Users/tanglei/PycharmProjects/MeetingUserConcurrency/MainProgram.py(148): INFO 数据库运行正常，程序正常工作
+2019-01-07 15:25:36,436 C:/Users/tanglei/PycharmProjects/MeetingUserConcurrency/MainProgram.py(148): INFO 数据库运行正常，程序正常工作
+2019-01-07 15:26:12,499 C:/Users/tanglei/PycharmProjects/MeetingUserConcurrency/MainProgram.py(148): INFO 数据库运行正常，程序正常工作
+2019-01-07 15:26:57,799 C:/Users/tanglei/PycharmProjects/MeetingUserConcurrency/MainProgram.py(148): INFO 数据库运行正常，程序正常工作
+2019-01-07 15:27:38,477 C:/Users/tanglei/PycharmProjects/MeetingUserConcurrency/MainProgram.py(148): INFO 数据库运行正常，程序正常工作
+2019-01-07 15:27:53,154 C:/Users/tanglei/PycharmProjects/MeetingUserConcurrency/MainProgram.py(148): INFO 数据库运行正常，程序正常工作
+2019-01-07 15:28:50,770 C:/Users/tanglei/PycharmProjects/MeetingUserConcurrency/MainProgram.py(148): INFO 数据库运行正常，程序正常工作
+2019-01-07 15:30:41,269 C:/Users/tanglei/PycharmProjects/MeetingUserConcurrency/MainProgram.py(148): INFO 数据库运行正常，程序正常工作
+2019-01-07 15:31:57,684 C:/Users/tanglei/PycharmProjects/MeetingUserConcurrency/MainProgram.py(148): INFO 数据库运行正常，程序正常工作
+2019-01-07 15:33:23,845 C:/Users/tanglei/PycharmProjects/MeetingUserConcurrency/MainProgram.py(148): INFO 数据库运行正常，程序正常工作
+2019-01-07 15:36:52,522 C:/Users/tanglei/PycharmProjects/MeetingUserConcurrency/MainProgram.py(148): INFO 数据库运行正常，程序正常工作
+2019-01-07 15:49:21,549 C:/Users/tanglei/PycharmProjects/MeetingUserConcurrency/MainProgram.py(152): INFO 数据库运行正常，程序正常工作
+2019-01-07 15:51:30,184 C:/Users/tanglei/PycharmProjects/MeetingUserConcurrency/MainProgram.py(154): INFO 数据库运行正常，程序正常工作
+2019-01-07 15:59:12,799 C:/Users/tanglei/PycharmProjects/MeetingUserConcurrency/MainProgram.py(150): INFO 数据库运行正常，程序正常工作
