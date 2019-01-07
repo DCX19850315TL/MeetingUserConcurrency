@@ -20,8 +20,8 @@ import socket
 #自定义模块
 from common.logger import logger
 #设置默认字符集为utf-8
-#reload(sys)
-#sys.setdefaultencoding("utf-8")
+reload(sys)
+sys.setdefaultencoding("utf-8")
 #通过ConfigParser模块进行配置文件的读取
 seeting_file = os.path.join(os.path.abspath('conf'),'seeting.ini')
 conf = ConfigParser.ConfigParser()
@@ -131,7 +131,6 @@ def SetRelayIntoInfluxdb(json_body):
     except:
         s = traceback.format_exc()
         logger().error(s)
-
 
 if __name__ == '__main__':
     #连接InfluxDB的端口
