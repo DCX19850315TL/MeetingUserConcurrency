@@ -17,6 +17,7 @@ import time
 import ConfigParser
 import traceback
 import socket
+import json
 #自定义模块
 from common.logger import logger
 #设置默认字符集为utf-8
@@ -151,20 +152,36 @@ if __name__ == '__main__':
             while True:
                 #求指定时间
                 begConcurrencyTime = UserConcurrencyTimeStamp()
+                #begConcurrencyTime = 1544342775
                 #设置指定时间并发人数
                 result = SetDayConcurrencyNew(begConcurrencyTime)
                 Concurrency = int(result[0])
-                # 设置指定时间的Relay的并发人数
-                relayresult = SetRelayConcurrencyNew(begConcurrencyTime)
-                relayresultlen = len(relayresult[0])
-                #将时间的单位从秒转换为纳秒，用于Influxdb数据库
-                Time = int(result[1]) * 1000000000
-                #设置日志时间，并将时间戳转换为正常的时间格式
+                # 将时间的单位从秒转换为纳秒，用于Influxdb数据库
+                Time = int(result[1]) * 1000000000  # 设置日志时间，并将时间戳转换为正常的时间格式
                 TimeLogStamp = int(result[1])
                 TimeLogArray = time.localtime(TimeLogStamp)
                 TimeLog = time.strftime("%Y-%m-%d %H:%M:%S", TimeLogArray)
+                # 设置指定时间的Relay的并发人数
+                relayresult = SetRelayConcurrencyNew(begConcurrencyTime)
+                relayresultlen = len(relayresult[0])
+                #将Relay的并发人数格式化成JSON格式
+                RelayDictTemp1 = {}
+                RelayDictTemp3 = {}
+                RelayDict = {"measurement":"Relay_Concurrency","tags":{"entName": entName1},"time":Time,}
+                RelayList = []
+                for i in range(relayresultlen):
+                    RelayAddress = relayresult[0][i][0]
+                    #写入的数据类型应该是int
+                    RelayConcurrencyNumber = int(relayresult[0][i][1])
+                    RelayDictTemp = {RelayAddress:RelayConcurrencyNumber}
+                    RelayDictTemp1.update(RelayDictTemp)
+                RelayDictTemp2={"fields":RelayDictTemp1}
+                RelayDict.update(RelayDictTemp2)
+                for k,v in RelayDict.items():
+                    RelayDictTemp3[k]=v
+                RelayList.append(RelayDictTemp3)
 
-                if Concurrency != 0:
+                if Concurrency != 0 and relayresultlen != 0:
                     # 数据json格式化
                     json_body = [
                         {
@@ -180,24 +197,10 @@ if __name__ == '__main__':
                     ]
                     SetUserIntoInfluxdb(json_body)
                     logger().info('这个%s时间点%s企业并发人数为%s' % (TimeLog, entName1, Concurrency))
-                    for i in range(relayresultlen):
-                        # 数据json格式化
-                        json_body1 = [
-                            {
-                                "measurement": "Relay_Concurrency",
-                                "tags": {
-                                    "entName": entName1,
-                                    "RelayName": relayresult[0][i][0],
-                                },
-                                "time": Time,
-                                "fields": {
-                                    "value": relayresult[0][i][1],
-                                }
-                            }
-                        ]
-                        SetRelayIntoInfluxdb(json_body1)
-                        logger().info('这个%s时间点%sRelay的并发人数为%s' % (TimeLog, entName1, relayresult[0][i][1]))
-                    Time = Time + TimeInterval
+                    json_body1 = RelayList
+                    SetRelayIntoInfluxdb(json_body1)
+                    logger().info('这个%s时间点%sRelay的并发人数为%s' % (TimeLog, entName1, json_body1[0]["fields"]))
+                    #Time = Time + TimeInterval * 1000000000
                     time.sleep(TimeInterval)
                 else:
                     pass
